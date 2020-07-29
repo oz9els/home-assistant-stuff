@@ -1,0 +1,102 @@
+elements:
+  - entity: sensor.nilan_udendors_temp
+    style:
+      color: gray
+      font-size: 150%
+      left: 30.5%
+      top: 9.0%
+    type: state-label
+  - entity: sensor.nilan_afkast_temp
+    style:
+      color: gray
+      font-size: 150%
+      left: 71.5%
+      top: 9.0%
+    type: state-label
+  - entity: sensor.nilan_rum_temp
+    style:
+      color: gray
+      font-size: 150%
+      left: 30.5%
+      top: 60.2%
+    type: state-label
+  - entity: sensor.nilan_indblaes_temp
+    style:
+      color: gray
+      font-size: 150%
+      left: 71.5%
+      top: 60.2%
+    type: state-label
+  - entity: sensor.nilan_krydsveklser_effektivitet
+    style:
+      color: gray
+      font-size: 150%
+      left: 50%
+      top: 29%
+    type: state-label
+  - entity: sensor.nilan_luftfugtighed
+    style:
+      color: gray
+      font-size: 150%
+      left: 51.0%
+      top: 77.2%
+    type: state-label
+  - entity: sensor.nilan_udblaes_procent
+    style:
+      color: white
+      font-size: 100%
+      left: 43.0%
+      top: 37.5%
+    type: state-label
+  - entity: sensor.nilan_indblaes_procent
+    style:
+      color: white
+      font-size: 100%
+      left: 57.0%
+      top: 37.5%
+    type: state-label
+  - entity: binary_sensor.nilan_bypass
+    style:
+      left: 50.0%
+      top: 37.3%
+    type: state-icon
+  - entity: sensor.nilan_filterstatus
+    state_image:
+      Filter OK: /local/nilan_filter_green1.png
+      Filter skal skiftes!!!: /local/nilan_filter_red1.png
+    style:
+      left: 50%
+      top: 25%
+    type: image
+  - entity: sensor.drift
+    state_filter:
+      Sommerdrift: brightness(100%)  saturate(1)
+      SommerdriftX: brightness(90%) saturate(1.2)
+      Vinterdrift: brightness(100%)  saturate(1)
+      VinterdriftX: brightness(50%) hue-rotate(45deg)
+    state_image:
+      Sommerdrift: /local/nilan/sommer.png
+      Vinterdrift: /local/nilan/vinter.png
+    style:
+      left: 10%
+      top: 10%
+    type: image
+  - entity: sensor.nilan_indblaes_procent
+    state_image:
+      '0': /local/nilan/fan-0.png
+      '20': /local/nilan/fan-a20.gif
+      '35': /local/nilan/fan-a10.gif
+      '48': /local/nilan/fan-a5.gif
+      '90': /local/nilan/fan-a2.gif
+      '101': Værdier 20/31 - 35/46 - 48/59 - 90/100
+    style:
+      left: 90%
+      top: 10%
+    type: image
+  - entity: fan.nilan
+    style:
+      left: 92%
+      top: 18%
+    type: state-label
+image: /local/nilan/nilan_2.png
+type: picture-elements
