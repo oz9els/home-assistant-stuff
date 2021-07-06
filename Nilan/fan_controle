@@ -1,0 +1,20 @@
+### from configuration.yaml
+#################################
+###  Nilan Blæser Kontrol     ###
+#################################    
+
+fan:
+  - platform: mqtt
+    name: "Nilan"
+    state_topic: "ventilation/control/RunSet"
+    command_topic: "ventilation/runset"
+    percentage_command_topic: "ventilation/ventset"
+    percentage_state_topic: "ventilation/control/VentSet"
+    speed_range_min: 1
+    speed_range_max: 4
+    qos: 2
+    retain: true
+    payload_on: "1"
+    payload_off: "0"
+    unique_id: nilan_fan
+
